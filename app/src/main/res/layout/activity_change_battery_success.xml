@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_00103A"
+        tools:context=".ui.main.changeBattery.changeBatterySuccess.ChangeBatterySuccessFragment">
+
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/style_text_40sp_white_inter_bold"
+            android:layout_marginTop="52dp"
+            android:text="@string/change_battery_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/img_battery_1_20"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="0dp"
+            android:layout_height="380dp"
+            android:src="@drawable/img_battery_full"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/tv_percent_old_battery"
+            style="@style/style_text_108sp_white_inter_medium"
+            android:text="12%"
+            android:textColor="@color/color_CCFFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.63" />
+
+        <TextView
+            android:id="@+id/tv_serial_old_battery"
+            style="@style/style_text_24sp_white_inter_semi_bold"
+            android:layout_marginTop="92dp"
+            android:text="SN: 1937 7126 1511"
+            android:textColor="@color/color_80FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/tv_percent_new_battery"
+            style="@style/style_text_108sp_white_inter_medium"
+            android:text="99%"
+            android:textColor="@color/color_CCFFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.63" />
+
+        <TextView
+            android:id="@+id/tv_serial_new_battery"
+            style="@style/style_text_24sp_white_inter_semi_bold"
+            android:layout_marginTop="92dp"
+            android:text="SN: 1937 7126 1111"
+            android:textColor="@color/color_80FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/style_text_40sp_white_inter_bold"
+            android:layout_marginTop="40dp"
+            android:text="@string/continue_change_battery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView14"
+            style="@style/style_text_28sp_white_inter_medium"
+            android:layout_width="0dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="44dp"
+            android:gravity="center"
+            android:text="@string/to_continue_change_battery_you_please"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView15"
+            style="@style/style_text_28sp_white_inter_medium"
+            android:layout_width="0dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="44dp"
+            android:gravity="center"
+            android:text="@string/if_do_not_want_to_change_you_please"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_marginBottom="56dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="44dp"
+            android:paddingEnd="44dp"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnLogout"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginEnd="44dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_button_red"
+                    android:gravity="center">
+
+                    <ImageView
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_icon_logout_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="15dp"/>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/style_text_30sp_white_inter_semi_bold"
+                        android:text="@string/finish"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_continue"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_button_blue"
+                    android:gravity="center">
+
+                    <ImageView
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        android:id="@+id/imageViewContinue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_icon_continue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewContinue"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="15dp"/>
+
+                    <TextView
+                        android:id="@+id/textViewContinue"
+                        style="@style/style_text_30sp_white_inter_semi_bold"
+                        android:text="@string/continue_change_battery"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewContinue"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarContinue"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:indeterminateTint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_time_remaining"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="34dp"
+            android:max="60"
+            android:progress="60"
+            android:progressDrawable="@drawable/bg_pb_change_battery_success"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_time_remaining"
+            style="@style/style_text_24sp_white_inter_medium"
+            android:layout_marginStart="12dp"
+            android:text="120s"
+            android:textColor="@color/color_FFDAD6"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_time_remaining"
+            app:layout_constraintStart_toEndOf="@+id/pb_time_remaining"
+            app:layout_constraintTop_toTopOf="@+id/pb_time_remaining" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottom_dialogFragment"
+            android:name="com.selex.bssStation.core.utility.BottomDialogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

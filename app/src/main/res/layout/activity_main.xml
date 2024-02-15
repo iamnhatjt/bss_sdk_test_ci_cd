@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screen.home.MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_banner"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/shadow_color_top_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_icon_avatar"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/img_banner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/img_icon_avatar"
+                app:layout_constraintEnd_toStartOf="@+id/btn_logout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_icon_avatar"
+                app:layout_constraintTop_toTopOf="@+id/img_icon_avatar">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/style_text_28sp_white_inter_medium"
+                    android:text="Xin chào " />
+
+                <TextView
+                    android:id="@+id/tv_address_station"
+                    style="@style/style_text_20sp_white_inter_medium"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:background="@drawable/bg_button_logout"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/img_icon_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_icon_avatar">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/img_icon_logout_red" />
+
+                <TextView
+                    style="@style/style_text_28sp_white_inter_medium"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/logout"
+                    android:textColor="@color/color_93000A" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/shadow_color_bottom_black"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_start_change_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="94dp"
+                android:foreground="@drawable/ripple_rounded_button_textview"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_button_blue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="48dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/img_icon_change_circle" />
+
+                    <TextView
+                        style="@style/style_text_30sp_white_inter_semi_bold"
+                        android:text="@string/start_change_battery" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar_start_change"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_btn"
+            app:layout_constraintEnd_toEndOf="@+id/layout_btn"
+            app:layout_constraintStart_toStartOf="@+id/layout_btn"
+            app:layout_constraintTop_toTopOf="@+id/layout_btn" />
+
+        <LinearLayout
+            android:id="@+id/layout_maintenance"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:background="@color/md_theme_light_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_error"
+                android:src="@drawable/img_icon_error"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_station_maintenance"
+                    style="@style/style_text_32sp_white_inter_bold"
+                    android:text="@string/station_maintenance"/>
+                <TextView
+                    android:id="@+id/tv_come_back_later"
+                    style="@style/style_text_28sp_white_inter_medium"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/come_back_later" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottom_dialogFragment"
+            android:name="com.selex.bssStation.core.utility.BottomDialogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_blue"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        <Button
+            android:id="@+id/btnEnter"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Enter Kiosk Mode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSerial" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Exit Kiosk Mode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnEnter" />
+
+<!--            android:layout_height="40dp"-->
+        <EditText
+            android:id="@+id/edtSerial"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnExit"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_blue"
+            android:hint="Số seri"
+            android:textColorHint="@color/md_theme_light_onPrimary"
+            android:padding="15dp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnWriteSerial"
+            android:visibility="gone"
+            android:text="Ghi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/edtSerial"
+            app:layout_constraintStart_toEndOf="@id/edtSerial"
+            app:layout_constraintBottom_toBottomOf="@id/edtSerial"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

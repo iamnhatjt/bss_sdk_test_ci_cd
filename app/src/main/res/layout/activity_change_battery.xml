@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        tools:context=".ui.main.changeBattery.ChangeBatteryActivity"
+        android:background="@color/color_00103A"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--viewpager-->
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_change_battery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+<!--
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_rcy"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="138dp"
+                android:layout_marginEnd="125dp"
+                android:layout_marginBottom="202dp"
+                android:src="@drawable/img_battery_station"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_battery_compartment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="140dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/style_text_40sp_white_inter_bold"
+                android:text="@string/user_put_the_old_battery_in_the_station"
+                app:layout_constraintBottom_toTopOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+                <TextView
+                    style="@style/style_text_32sp_white_inter_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_compartment_door_opened" />
+
+                <TextView
+                    style="@style/style_text_24sp_white_inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginEnd="44dp"
+                    android:text="@string/please_put_the_battery_in_the_compartment" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+
+
+        <!--<LinearLayout
+            android:id="@+id/layouts"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layout_loading_check_battery"
+                layout="@layout/layout_loading_check_battery"/>
+
+        </LinearLayout>-->
+
+
+
+    </LinearLayout>
+
+</layout>

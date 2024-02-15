@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_00103A"
+        tools:context=".ui.main.changeBattery.rate.RateFragment">
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/style_text_40sp_white_inter_bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/wishing_you_safe_journey"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/style_text_28sp_white_inter_medium"
+            android:layout_width="0dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="44dp"
+            android:gravity="center"
+            android:text="@string/total_time_change_battery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="610dp"
+            android:layout_height="668dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView16"
+            style="@style/style_text_28sp_white_inter_medium"
+            android:layout_width="0dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="44dp"
+            android:gravity="center"
+            android:text="@string/please_rate_quality"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <RatingBar
+            android:id="@+id/rating_bar_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:numStars="5"
+            android:rating="4"
+            android:progressTint="@color/color_EFB80B"
+            android:progressBackgroundTint="@color/color_4DEFB80B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

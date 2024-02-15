@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_rcy"
+        android:visibility="visible"
+        android:background="@color/color_00103A"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="140dp"
+            android:src="@drawable/img_battery_station"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcy_battery_compartment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="160dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/style_text_40sp_white_inter_bold"
+            android:layout_marginTop="48dp"
+            android:text="@string/user_put_the_old_battery_in_the_station"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                style="@style/style_text_32sp_white_inter_bold"
+                android:id="@+id/tv_position_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đã mở cửa khoang số 12" />
+
+            <TextView
+                style="@style/style_text_24sp_white_inter_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="44dp"
+                android:gravity="center"
+                android:text="@string/please_put_the_battery_in_the_compartment" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_close_cabinet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/md_theme_light_error"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/img_icon_error"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_close_error"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/style_text_32sp_white_inter_bold"
+                    android:text="@string/please_close_station" />
+
+                <TextView
+                    style="@style/style_text_28sp_white_inter_medium"
+                    android:text="@string/let_the_system_proceed_to_change_the_battery" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_close_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:layout_marginEnd="26dp"
+                android:padding="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_icon_close" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_maintenance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/md_theme_light_error"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_retry"
+                    style="@style/style_text_32sp_white_inter_bold"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/retry" />
+
+                <TextView
+                    android:id="@+id/tv_exit"
+                    style="@style/style_text_32sp_white_inter_bold"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/exit" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottom_dialogFragment"
+            android:name="com.selex.bssStation.core.utility.BottomDialogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

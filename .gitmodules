@@ -1,0 +1,3 @@
+[submodule "app/src/main/cpp/bss_sdk"]
+	path = app/src/main/cpp/bss_sdk
+	url = https://github.com/Selex-Motors/bss-sdk.git
